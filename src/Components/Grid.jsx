@@ -33,19 +33,19 @@ function createData(category, inventoryNumber, model, serialNumber, location) {
 }
 
 const rows = [
-  createData('Skener', 250, 'MC9130', 1500849342, 'Karlovac'),
-  createData('Printer', 452, 'HP', 51, 4.9),
-  createData('Skener', 262, 'CK65', 24, 6.0),
-  createData('Skener', 159, 6.0, 24, 4.0),
-  createData('Printer', 356, 16.0, 49, 3.9),
-  createData('Honeycomb', 408, 3.2, 87, 6.5),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Skener', 375, 0.0, 94, 0.0),
-  createData('KitKat', 518, 26.0, 65, 7.0),
-  createData('Printer', 392, 0.2, 98, 0.0),
-  createData('Printer', 318, 0, 81, 2.0),
-  createData('Skener', 360, 19.0, 9, 37.0),
-  createData('Oreo', 437, 18.0, 63, 4.0),
+  createData('Skener', 250, 'MC9130', '1500849342', 'Jastrebarsko'),
+  createData('Printer', 452, 'HP', 'CZNXSP9645', 'Jastrebarsko'),
+  createData('Skener', 262, 'CK65', '198756423', 'Zabok'),
+  createData('Skener', 159, 'CK65' ,'125125127', 'Jastrebarsko'),
+  createData('Printer', 356, 16.0, 'CZKLBD8759', 'Rijeka'),
+  createData('PC', 408, 'HP', 'CZNXSPA923', 'Zagreb HQ'),
+  // createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
+  // createData('Skener', 375, 0.0, 94, 0.0),
+  // createData('KitKat', 518, 26.0, 65, 7.0),
+  // createData('Printer', 392, 0.2, 98, 0.0),
+  // createData('Printer', 318, 0, 81, 2.0),
+  // createData('Skener', 360, 19.0, 9, 37.0),
+  // createData('Oreo', 437, 18.0, 63, 4.0),
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -99,7 +99,7 @@ const headCells = [
   },
   {
     id: 'serialNumber',
-    numeric: true,
+    numeric: false,
     disablePadding: false,
     label: 'Serijski broj',
   },
