@@ -34,16 +34,16 @@ function createData(category, inventoryNumber, model, serialNumber, location) {
 
 const rows = [
   createData('Skener', 250, 'MC9130', 1500849342, 'Karlovac'),
-  // createData('', 452, 25.0, 51, 4.9),
+  // createData('Printer', 452, 25.0, 51, 4.9),
   // createData('Skener', 262, 16.0, 24, 6.0),
   // createData('Skener', 159, 6.0, 24, 4.0),
-  // createData('Gingerbread', 356, 16.0, 49, 3.9),
+  // createData('Printer', 356, 16.0, 49, 3.9),
   // createData('Honeycomb', 408, 3.2, 87, 6.5),
   // createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
   // createData('Skener', 375, 0.0, 94, 0.0),
   // createData('KitKat', 518, 26.0, 65, 7.0),
-  // createData('Lollipop', 392, 0.2, 98, 0.0),
-  // createData('Marshmallow', 318, 0, 81, 2.0),
+  // createData('Printer', 392, 0.2, 98, 0.0),
+  // createData('Printer', 318, 0, 81, 2.0),
   // createData('Skener', 360, 19.0, 9, 37.0),
   // createData('Oreo', 437, 18.0, 63, 4.0),
 ];
@@ -135,7 +135,7 @@ function EnhancedTableHead(props) {
         {headCells.map((headCell) => (
           <TableCell
             key={headCell.id}
-            align={headCell.numeric ? 'right' : 'left'}
+            align="left"
             padding={headCell.disablePadding ? 'none' : 'normal'}
             sortDirection={orderBy === headCell.id ? order : false}
           >
@@ -321,11 +321,11 @@ export default function EnhancedTable() {
                   return (
                     <TableRow
                       hover
-                      onClick={(event) => handleClick(event, row.name)}
+                      onClick={(event) => handleClick(event, row.serialNumber)}
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
-                      key={row.name}
+                      key={row.serialNumber}
                       selected={isItemSelected}
                     >
                       <TableCell padding="checkbox">
@@ -345,10 +345,10 @@ export default function EnhancedTable() {
                       >
                         {row.category}
                       </TableCell>
-                      <TableCell align="right">{row.inventoryNumber}</TableCell>
-                      <TableCell align="right">{row.model}</TableCell>
-                      <TableCell align="right">{row.serialNumber}</TableCell>
-                      <TableCell align="right">{row.location}</TableCell>
+                      <TableCell align="left">{row.inventoryNumber}</TableCell>
+                      <TableCell align="left">{row.model}</TableCell>
+                      <TableCell align="left">{row.serialNumber}</TableCell>
+                      <TableCell align="left">{row.location}</TableCell>
                     </TableRow>
                   );
                 })}
