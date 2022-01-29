@@ -33,19 +33,19 @@ function createData(category, inventoryNumber, model, serialNumber, location) {
 }
 
 const rows = [
-  createData('Skener', 305, 3.7, 67, 4.3),
-  createData('', 452, 25.0, 51, 4.9),
-  createData('Skener', 262, 16.0, 24, 6.0),
-  createData('Skener', 159, 6.0, 24, 4.0),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
-  createData('Honeycomb', 408, 3.2, 87, 6.5),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Skener', 375, 0.0, 94, 0.0),
-  createData('KitKat', 518, 26.0, 65, 7.0),
-  createData('Lollipop', 392, 0.2, 98, 0.0),
-  createData('Marshmallow', 318, 0, 81, 2.0),
-  createData('Skener', 360, 19.0, 9, 37.0),
-  createData('Oreo', 437, 18.0, 63, 4.0),
+  createData('Skener', 250, 'MC9130', 1500849342, 'Karlovac'),
+  // createData('', 452, 25.0, 51, 4.9),
+  // createData('Skener', 262, 16.0, 24, 6.0),
+  // createData('Skener', 159, 6.0, 24, 4.0),
+  // createData('Gingerbread', 356, 16.0, 49, 3.9),
+  // createData('Honeycomb', 408, 3.2, 87, 6.5),
+  // createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
+  // createData('Skener', 375, 0.0, 94, 0.0),
+  // createData('KitKat', 518, 26.0, 65, 7.0),
+  // createData('Lollipop', 392, 0.2, 98, 0.0),
+  // createData('Marshmallow', 318, 0, 81, 2.0),
+  // createData('Skener', 360, 19.0, 9, 37.0),
+  // createData('Oreo', 437, 18.0, 63, 4.0),
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -343,12 +343,12 @@ export default function EnhancedTable() {
                         scope="row"
                         padding="none"
                       >
-                        {row.name}
+                        {row.category}
                       </TableCell>
-                      <TableCell align="right">{row.calories}</TableCell>
-                      <TableCell align="right">{row.fat}</TableCell>
-                      <TableCell align="right">{row.carbs}</TableCell>
-                      <TableCell align="right">{row.protein}</TableCell>
+                      <TableCell align="right">{row.inventoryNumber}</TableCell>
+                      <TableCell align="right">{row.model}</TableCell>
+                      <TableCell align="right">{row.serialNumber}</TableCell>
+                      <TableCell align="right">{row.location}</TableCell>
                     </TableRow>
                   );
                 })}
