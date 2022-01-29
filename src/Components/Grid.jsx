@@ -37,7 +37,7 @@ const rows = [
   createData('Printer', 452, 'HP', 'CZNXSP9645', 'Jastrebarsko'),
   createData('Skener', 262, 'CK65', '198756423', 'Zabok'),
   createData('Skener', 159, 'CK65' ,'125125127', 'Jastrebarsko'),
-  createData('Printer', 356, 16.0, 'CZKLBD8759', 'Rijeka'),
+  createData('Printer', 356, 'HP', 'CZKLBD8759', 'Rijeka'),
   createData('PC', 408, 'HP', 'CZNXSPA923', 'Zagreb HQ'),
   // createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
   // createData('Skener', 375, 0.0, 94, 0.0),
@@ -197,7 +197,7 @@ const EnhancedTableToolbar = (props) => {
           id="tableTitle"
           component="div"
         >
-          Nutrition
+          Oprema
         </Typography>
       )}
 
