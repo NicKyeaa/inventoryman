@@ -22,10 +22,13 @@ const rows = [
 export default function InvGrid() {
     return (
         <div style={{ height: 400, width: '100%'}}>
-            <DataGrid>
+            <DataGrid
                 rows={rows}
                 columns={columns}
-            </DataGrid>
+                pagesize={5}
+                rowsPerPage={5}
+                checkboxSelection
+            />
         </div>
   );
 }
