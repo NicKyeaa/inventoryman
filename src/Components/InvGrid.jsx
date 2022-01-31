@@ -6,7 +6,14 @@ const columns = [
     {
         field: 'category',
         headerName: 'Kategorija',
-        width: 150
+        width: 150,
+        align: 'left',
+        headerAlign: 'center'
+    },
+    {
+        field: 'type',
+        headerName: 'Tip opreme',
+        width: 110
     },
     {
         field: 'model',
@@ -21,35 +28,37 @@ const columns = [
     {
         field: 'serialNumber',
         headerName: 'Serijski broj',
-        width: 100
+        width: 130
     },
     {
         field: 'location',
         headerName: 'Lokacija',
-        width: 120
+        width: 150
     }
 ];
 
-const rows = [
-    { id: 1, category: 'Skener', inventoryNumber: 200 }
-];
+const rows = [{
+    id: 1,
+    category: 'Skener',
+    type: 'HoneyWell',
+    model: 'CK65',
+    inventoryNumber: 200,
+
+}];
 
 export default function InvGrid() {
-    return ( <
-        div style = {
-            { height: 400, width: '100%' }
-        } >
-        <
-        DataGrid rows = { rows }
-        columns = { columns }
-        pagesize = { 5 }
-        rowsPerPage = { 5 }
-        checkboxSelection components = {
-            {
-                Toolbar: GridToolbar,
-            }
-        }
-        /> < /
-        div >
+    return (
+        <div style={{ height: 400, width: '100%' }}>
+            <DataGrid rows = { rows }
+                columns = { columns }
+                pagesize = { 5 }
+                rowsPerPage = { 5 }
+                checkboxSelection components = {
+                    {
+                        Toolbar: GridToolbar,
+                    }
+                }
+            />
+        </div>
     );
 }
