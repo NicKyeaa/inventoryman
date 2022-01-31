@@ -49,7 +49,7 @@ const rows = [{
 
 export default function InvGrid() {
 
-    const [data, setData] = useState([]);
+    // const [data, setData] = useState([]);
 
     return (
         <div style={{ height: 400, width: '100%' }}>
