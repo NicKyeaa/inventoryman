@@ -1,17 +1,27 @@
 import React from 'react';
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 const columns = [
     { field: 'id', headerName: 'ID', width: 90 },
     {
         field: 'category',
         headerName: 'Kategorija',
-        width: 150,
+        width: 150
     },
     {
         field: 'inventoryNumber',
         headerName: 'Inventurni broj',
         width: 100,
+    },
+    {
+        field: 'model',
+        headerName: 'Model',
+        width: 150
+    },
+    {
+        field: 'serialNumber',
+        headerName: 'Serijski broj',
+        width: 100
     }
 ];
 
@@ -28,6 +38,9 @@ export default function InvGrid() {
                 pagesize={5}
                 rowsPerPage={5}
                 checkboxSelection
+                components={{
+                    Toolbar: GridToolbar,
+                }}
             />
         </div>
   );

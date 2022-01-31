@@ -1,11 +1,11 @@
-import Grid from './Components/Grid';
-// import InvGrid from './Components/InvGrid';
+// import Grid from './Components/Grid';
+import InvGrid from './Components/InvGrid';
 
 function App() {
   return (
     <div className="App">
-      <Grid />
-      {/* <InvGrid /> */}
+      {/* <Grid /> */}
+      <InvGrid />
     </div>
   );
 }
