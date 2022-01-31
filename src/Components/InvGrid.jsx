@@ -28,12 +28,12 @@ const columns = [
     {
         field: 'serialNumber',
         headerName: 'Serijski broj',
-        width: 130
+        width: 150
     },
     {
         field: 'location',
         headerName: 'Lokacija',
-        width: 150
+        width: 130
     }
 ];
 
@@ -43,7 +43,8 @@ const rows = [{
     type: 'HoneyWell',
     model: 'CK65',
     inventoryNumber: 200,
-
+    serialNumber: 'CNCZK8123Y',
+    location: 'Jastrebarsko'
 }];
 
 export default function InvGrid() {
