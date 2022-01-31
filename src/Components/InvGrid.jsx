@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 const columns = [
@@ -23,7 +23,7 @@ const columns = [
     {
         field: 'inventoryNumber',
         headerName: 'Inventurni broj',
-        width: 100,
+        width: 117,
     },
     {
         field: 'serialNumber',
@@ -48,6 +48,9 @@ const rows = [{
 }];
 
 export default function InvGrid() {
+
+    const [data, setData] = useState([]);
+
     return (
         <div style={{ height: 400, width: '100%' }}>
             <DataGrid rows = { rows }
