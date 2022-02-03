@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import AddBoxRounded from '@mui/icons-material/AddBoxRounded'
 import IconButton from '@mui/material/IconButton';
@@ -49,13 +49,19 @@ const rows = [{
     location: 'Jastrebarsko'
 }];
 
+
+
 export default function InvGrid() {
 
-    // const [data, setData] = useState([]);
+    const [modalStatus, setModalStatus] = useState(false);
+
+    const handleOnClickAddButton = () => { 
+        setModalStatus(true);
+    };
 
     return (
         <div style={{ height: 400, width: '100%' }}>
-            <IconButton onClick={() => {console.log('Clicked')}}>
+            <IconButton onClick={handleOnClickAddButton}>
                 <AddBoxRounded fontSize="large" />
             </IconButton>
             <DataGrid rows = { rows }
