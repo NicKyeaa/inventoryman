@@ -61,6 +61,7 @@ export default function InvGrid() {
 
     return (
         <div style={{ height: 400, width: '100%' }}>
+            {/* {modalStatus === true && } */}
             <IconButton onClick={handleOnClickAddButton}>
                 <AddBoxRounded fontSize="large" />
             </IconButton>
