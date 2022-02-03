@@ -55,7 +55,7 @@ export default function InvGrid() {
 
     return (
         <div style={{ height: 400, width: '100%' }}>
-            <IconButton>
+            <IconButton onClick={() => {console.log('Clicked')}}>
                 <AddBoxRounded fontSize="large" />
             </IconButton>
             <DataGrid rows = { rows }
