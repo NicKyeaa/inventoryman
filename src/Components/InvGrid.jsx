@@ -1,6 +1,6 @@
 import React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
-import AddIcon from '@mui/icons-material/Add'
+import AddBoxRounded from '@mui/icons-material/AddBoxRounded'
 import IconButton from '@mui/material/IconButton';
 
 const columns = [
@@ -55,7 +55,9 @@ export default function InvGrid() {
 
     return (
         <div style={{ height: 400, width: '100%' }}>
-            <AddIcon></AddIcon>
+            <IconButton>
+                <AddBoxRounded fontSize="large" />
+            </IconButton>
             <DataGrid rows = { rows }
                 columns = { columns }
                 pagesize = { 5 }
