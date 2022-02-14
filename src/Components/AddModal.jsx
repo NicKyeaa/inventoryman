@@ -7,11 +7,12 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
-export default function FormDialog() {
+export default function AddModal(props) {
 
   return (
     <div>
-      <Dialog open={true}>
+    
+      <Dialog open={props.open}>
         <DialogTitle>Subscribe</DialogTitle>
         <DialogContent>
           <DialogContentText>
@@ -36,3 +37,7 @@ export default function FormDialog() {
     </div>
   );
 }
+
+AddModal.defaultProps = {
+    open: false
+};

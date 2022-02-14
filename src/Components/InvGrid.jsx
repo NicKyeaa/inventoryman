@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 import AddBoxRounded from '@mui/icons-material/AddBoxRounded'
 import IconButton from '@mui/material/IconButton';
+import AddModal from './AddModal';
 
 const columns = [
     { field: 'id', headerName: 'ID', width: 90 },
@@ -61,7 +62,7 @@ export default function InvGrid() {
 
     return (
         <div style={{ height: 400, width: '100%' }}>
-            {/* {modalStatus === true && } */}
+            <AddModal open={modalStatus} />
             <IconButton onClick={handleOnClickAddButton}>
                 <AddBoxRounded fontSize="large" />
             </IconButton>
@@ -78,3 +79,5 @@ export default function InvGrid() {
         </div>
     );
 }
+
+InvGrid.defaultProps = {};
