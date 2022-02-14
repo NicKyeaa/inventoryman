@@ -10,17 +10,17 @@ import DialogTitle from '@mui/material/DialogTitle';
 export default function AddModal(props) {
     return (
         <div>
-        <Dialog open={props.modalState} onClose={props.closeModal}>
+        <Dialog open={props.modalState} onClose={props.closeModal} fullWidth maxWidth='lg'>
             <DialogTitle>Add New Asset</DialogTitle>
                 <DialogContent>
                     <DialogContentText>
-                        
+                        Here you can Add New Asset
                     </DialogContentText>
                     <TextField
                         autoFocus
                         margin="dense"
                         id="name"
-                        label="Email Address"
+                        label="New Asset"
                         type="email"
                         fullWidth
                         variant="standard"
@@ -28,7 +28,7 @@ export default function AddModal(props) {
                 </DialogContent>
             <DialogActions>
             <Button onClick={props.closeModal}>Cancel</Button>
-            <Button>Subscribe</Button>
+            <Button>Add</Button>
             </DialogActions>
         </Dialog>
         </div>
