@@ -60,9 +60,13 @@ export default function InvGrid() {
         setModalStatus(true);
     };
 
+    const handleCloseModal = () => {
+        setModalStatus(false);  
+    }
+
     return (
         <div style={{ height: 400, width: '100%' }}>
-            <AddModal modalState={modalStatus}/>
+            <AddModal modalState={modalStatus} closeModal={handleCloseModal} />
             <IconButton onClick={handleOnClickAddButton}>
                 <AddBoxRounded fontSize="large" />
             </IconButton>
