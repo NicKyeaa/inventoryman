@@ -8,11 +8,10 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 export default function AddModal(props) {
-
   return (
     <div>
     
-      <Dialog open={props.open}>
+      <Dialog open={props.open} onClose={props.closeModal}>
         <DialogTitle>Subscribe</DialogTitle>
         <DialogContent>
           <DialogContentText>
