@@ -31,7 +31,10 @@ export default function AddModal(props) {
                                     label="Kategorija *"
                                     // onChange={handleChange}
                                 >
-                                    <MenuItem value="Skener">Skener</MenuItem>
+                                {props.categoryOptions.map(option => {
+                                    return <MenuItem key={option.id} value={option.option}>{option.option}</MenuItem>
+                                })
+                                    }
                                 </Select>
                         </FormControl>
                     </Box>
