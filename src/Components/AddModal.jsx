@@ -21,17 +21,19 @@ export default function AddModal(props) {
                     <DialogContentText>
                         Here you can Add New Asset
                     </DialogContentText>
-                    <Box sx={{ minWidth: 120 }}>
-                        <InputLabel id="categoryInput">Kategorija</InputLabel>
-                        <Select
-                            labelId="categoryInput"
-                            id="categoryInput-select"
-                            // value={age}
-                            label="Kategorija"
-                            // onChange={handleChange}
-                        >
-                        </Select>
-                    </Box>
+                    <FormControl fullWidth>
+                        <Box sx={{ minWidth: 120 }}>
+                            <InputLabel id="categoryInput">Kategorija</InputLabel>
+                            <Select
+                                labelId="categoryInput"
+                                id="categoryInput-select"
+                                // value={age}
+                                label="Kategorija"
+                                // onChange={handleChange}
+                            >
+                            </Select>
+                        </Box>
+                    </FormControl>
                 </DialogContent>
             <DialogActions>
             <Button onClick={props.closeModal}>Cancel</Button>
