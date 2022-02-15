@@ -21,7 +21,7 @@ export default function AddModal(props) {
                     <DialogContentText>
                         Fields with * are required
                     </DialogContentText>
-                    <Box sx={{ m: 2}} >
+                    <Box sx={{ m: 2 }} >
                         <FormControl sx={{ width: 150 }}>
                                 <InputLabel id="categoryInput">Kategorija *</InputLabel>
                                 <Select
