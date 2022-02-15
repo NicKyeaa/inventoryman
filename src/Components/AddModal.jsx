@@ -22,13 +22,13 @@ export default function AddModal(props) {
                         Here you can Add New Asset
                     </DialogContentText>
                     <FormControl fullWidth>
-                        <Box sx={{ minWidth: 120 }}>
-                            <InputLabel id="categoryInput">Kategorija</InputLabel>
+                        <Box sx={{ m: 1, minWidth: 120 }}>
+                            <InputLabel id="categoryInput">Kategorija *</InputLabel>
                             <Select
                                 labelId="categoryInput"
                                 id="categoryInput-select"
                                 // value={age}
-                                label="Kategorija"
+                                label="Kategorija *"
                                 // onChange={handleChange}
                             >
                             </Select>

@@ -56,6 +56,7 @@ export default function InvGrid() {
 
     const [modalStatus, setModalStatus] = useState(false);
 
+    // Props for Modal
     const handleOnClickAddButton = () => { 
         setModalStatus(true);
     };
@@ -63,6 +64,9 @@ export default function InvGrid() {
     const handleCloseModal = () => {
         setModalStatus(false);  
     }
+
+    // Select options for category for modal
+    
 
     return (
         <div style={{ height: 400, width: '100%' }}>
