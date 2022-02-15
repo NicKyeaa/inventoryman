@@ -1,12 +1,12 @@
 import React from 'react';  
-// import Grid from './Components/Grid';
 import InvGrid from './Components/InvGrid';
+import ResponsiveAppBar from './Components/ResponsiveAppBar';
 // import AddModal from './Components/AddModal';
 
 function App() {
   return (
     <div className="App">
-      {/* <Grid /> */}
+      <ResponsiveAppBar />
       <InvGrid />
       {/* <AddModal /> */}
     </div>
