@@ -10,7 +10,7 @@ const columns = [
         field: 'category',
         headerName: 'Kategorija',
         width: 150,
-        align: 'left',
+        align: 'center',
         headerAlign: 'center'
     },
     {
