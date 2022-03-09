@@ -14,11 +14,18 @@ import Select from '@mui/material/Select';
 export default function AddModal(props) {
 
     const [category, setCategory] = React.useState(''); // State za kategoriju iz select komponente
+    const [type, setType] = React.useState(''); // State za tip opreme iz select komponente
 
     // handleCategory code for setting the category variable from selected value
     const handleCategory = (event) => { 
         // eslint-disable-next-line no-restricted-globals
         setCategory(event.target.value);
+    };
+
+    // handleCategory code for setting the category variable from selected value
+    const handleType = (event) => { 
+        // eslint-disable-next-line no-restricted-globals
+        setType(event.target.value);
     };
 
     return (
@@ -30,21 +37,39 @@ export default function AddModal(props) {
                         Fields with * are required
                     </DialogContentText>
                     <Box sx={{ m: 2 }} >
+                        {/* Kategorija */}
                         <FormControl sx={{ width: 150 }}>
-                                <InputLabel id="categoryInput">Kategorija *</InputLabel>
-                                <Select
-                                    labelId="categoryInput"
-                                    id="categoryInput-select"
-                                    value={category}
-                                    label="Kategorija *"
-                                    onChange={handleCategory}
-                                >
-                                <MenuItem value=""></MenuItem>
-                                {props.categoryOptions.map(option => {
-                                    return <MenuItem key={option.id} value={option.option}>{option.option}</MenuItem>
-                                })
-                                    }
-                                </Select>
+                            <InputLabel id="categoryInput">Kategorija *</InputLabel>
+                            <Select
+                                labelId="categoryInput"
+                                id="categoryInput-select"
+                                value={category}
+                                label="Kategorija *"
+                                onChange={handleCategory}
+                            >
+                            <MenuItem value=""></MenuItem>
+                            {props.categoryOptions.map(option => {
+                                return <MenuItem key={option.id} value={option.option}>{option.option}</MenuItem>
+                            })
+                                }
+                            </Select>
+                        </FormControl>
+                        {/* Tip opreme */}
+                        <FormControl sx={{ width: 150 }}>
+                            <InputLabel id="typeInput">Tip opreme *</InputLabel>
+                            <Select
+                                labelId="typeInput"
+                                id="typeInput-select"
+                                value={type}
+                                label="Tip opreme *"
+                                onChange={handleType}
+                            >
+                            <MenuItem value=""></MenuItem>
+                            {props.typeOptions.map(option => {
+                                return <MenuItem key={option.id} value={option.option}>{option.option}</MenuItem>
+                            })
+                                }
+                            </Select>
                         </FormControl>
                     </Box>
                 </DialogContent>
