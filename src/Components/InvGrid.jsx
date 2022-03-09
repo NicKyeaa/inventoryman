@@ -66,11 +66,12 @@ export default function InvGrid() {
     }
 
     // Select options for category for modal
-    const categoryOptions = [{ id: 1, option: 'Skener' }, { id: 2, option: 'PC' }, { id: 3, option: 'Printer'}];
+    const categoryOptions = [{ id: 1, option: 'Skener' }, { id: 2, option: 'PC' }, { id: 3, option: 'Printer' }];
+    const typeOptions = [{ id: 1, option: 'CK65' }, { id: 2, option: 'MC91' }, { id: 3, option: 'MC92' }];
 
     return (
         <div style={{ height: 400, width: '100%' }}>
-            <AddModal modalState={modalStatus} closeModal={handleCloseModal} categoryOptions={categoryOptions}/>
+            <AddModal modalState={modalStatus} closeModal={handleCloseModal} categoryOptions={categoryOptions} typeOptions={typeOptions}/>
             <IconButton onClick={handleOnClickAddButton}>
                 <AddBoxRounded fontSize="large" />
             </IconButton>
