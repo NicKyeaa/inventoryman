@@ -16,7 +16,10 @@ export default function AddModal(props) {
     const [category, setCategory] = React.useState(''); // State za kategoriju iz select komponente
 
     // handleCategory code for setting the category variable from selected value
-    
+    const handleCategory = () => { 
+        // eslint-disable-next-line no-restricted-globals
+        setCategory(event.target.value);
+    };
 
     return (
         <div>
