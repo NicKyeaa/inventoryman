@@ -12,6 +12,12 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export default function AddModal(props) {
+
+    const [category, setCategory] = React.useState(''); // State za kategoriju iz select komponente
+
+    // handleCategory code for setting the category variable from selected value
+    
+
     return (
         <div>
         <Dialog open={props.modalState} onClose={props.closeModal} fullWidth maxWidth='lg'>
@@ -26,9 +32,9 @@ export default function AddModal(props) {
                                 <Select
                                     labelId="categoryInput"
                                     id="categoryInput-select"
-                                    // value={age}
+                                    value={category}
                                     label="Kategorija *"
-                                    // onChange={handleChange}
+                                    onChange={handleCategory}
                                 >
                                 <MenuItem value=""></MenuItem>
                                 {props.categoryOptions.map(option => {
