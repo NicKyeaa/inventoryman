@@ -15,6 +15,7 @@ export default function AddModal(props) {
 
     const [category, setCategory] = React.useState(''); // State za kategoriju iz select komponente
     const [type, setType] = React.useState(''); // State za tip opreme iz select komponente
+    const [model, setModel] = React.useState(''); // State za model opreme iz select komponente
 
     // handleCategory code for setting the category variable from selected value
     const handleCategory = (event) => { 
@@ -22,10 +23,15 @@ export default function AddModal(props) {
         setCategory(event.target.value);
     };
 
-    // handleCategory code for setting the category variable from selected value
+    // handleCategory code for setting the type variable from selected value
     const handleType = (event) => { 
         // eslint-disable-next-line no-restricted-globals
         setType(event.target.value);
+    };
+
+    // handleCategory code for setting the model variable from selected values
+    const handleModel = (event) => { 
+        setModel(event.target.value);
     };
 
     return (
@@ -63,6 +69,23 @@ export default function AddModal(props) {
                                 value={type}
                                 label="Tip opreme *"
                                 onChange={handleType}
+                            >
+                            <MenuItem value=""></MenuItem>
+                            {props.typeOptions.map(option => {
+                                return <MenuItem key={option.id} value={option.option}>{option.option}</MenuItem>
+                            })
+                                }
+                            </Select>
+                        </FormControl>
+                        {/* Model */}
+                        <FormControl sx={{ width: 150 }}>
+                            <InputLabel id="modelInput">Model </InputLabel>
+                            <Select
+                                labelId="modelInput"
+                                id="modelInput-select"
+                                value={model}
+                                label="Model opreme "
+                                onChange={handleModel}
                             >
                             <MenuItem value=""></MenuItem>
                             {props.typeOptions.map(option => {
